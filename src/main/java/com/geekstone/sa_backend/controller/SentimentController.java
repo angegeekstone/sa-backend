@@ -32,6 +32,7 @@ public class SentimentController {
       return this.sentimentService.rechercher(typeSentiment);
     }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping(path = "{id}")
     public void supprimer(@PathVariable int id){
        this.sentimentService.supprimer(id);

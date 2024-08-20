@@ -36,7 +36,12 @@ public class SentimentService {
     }
 
     public List<Sentiment> rechercher(TypeSentiment typeSentiment) {
-        return this.sentimentRepository.findAll();
+        if(typeSentiment == null){
+            return  this.sentimentRepository.findAll();
+        } else {
+            return this.sentimentRepository.findByType(typeSentiment);
+        }
+
     }
 
 

@@ -37,4 +37,9 @@ public class ClientController {
     public Client lire(@PathVariable int id){
        return this.clientService.lire(id);
     }
+
+    @PutMapping(path = "{id}", consumes = APPLICATION_JSON_VALUE)
+    public void modifier(@PathVariable int id, @RequestBody Client client){
+        this.clientService.modifier(id, client);
+    }
 }

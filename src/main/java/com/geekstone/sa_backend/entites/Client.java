@@ -12,7 +12,18 @@ public class Client {
     @Column(unique = true)
     private String email;
 
+    @Column(unique = true)
+    private String telephone;
+
     public Client() {
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getTelephone() {
+        return telephone;
     }
 
     public int getId() {
